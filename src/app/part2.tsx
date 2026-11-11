@@ -2,31 +2,30 @@
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function part2Screen() {
+export default function Part2Screen() {
   return (
     <View style={styles.container}>
-      <Text>
-        <Text>
-  Part 2: The Old Cabin
-  {"\n\n"}
-  You and your friend walk toward the cabin.
-  The windows are broken and the door is open.
-  {"\n\n"}
-  Inside, you see pictures of missing people.
-  There is even a picture of you and your friend!
-  {"\n\n"}
-  Suddenly, you hear footsteps.
-  {"\n\n"}
-  What do you do?
-</Text>
+      <Text style={styles.story}>
+        You and your friend walk toward the cabin.
+        The windows are broken, and the door
+        is slightly open.
+        {"\n\n"}
+        Inside, you see pictures of missing people.
+        You notice a picture of yourself and
+        your best friend!
+        {"\n\n"}
+        Suddenly, you hear footsteps
+        coming from another room.
+        {"\n\n"}
+        What do you do?
       </Text>
 
-      <Link href="/part2" style={styles.button}>
-        A: Go to the old cabin
+      <Link href="/ending1" style={styles.button}>
+        A: Hide in cabin closet
       </Link>
 
-      <Link href="/part3" style={styles.button}>
-        B: Follow the footprints
+      <Link href="/ending3" style={styles.button}>
+        B: Run outside and search for an exit
       </Link>
     </View>
   );
@@ -38,11 +37,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
+    backgroundColor: "#8fac95",
   },
   button: {
-    fontSize: 20,
+    fontSize: 18,
     textDecorationLine: "underline",
-    color: "#0000ff",
+    color: "#115b28",
+    fontWeight: "bold",
     margin: 20,
   },
+  story: {
+  fontSize: 23,
+},
 });

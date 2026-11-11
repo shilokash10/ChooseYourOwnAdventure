@@ -5,7 +5,8 @@ import { StyleSheet, Text, View } from "react-native";
 export default function StartScreen() {
   return (
     <View style={styles.container}>
-      <Text> The Forest That Never Ends
+      <Text style={styles.story}>
+        The Forest That Never Ends
         {"\n\n"}
         One afternoon, you and your best friend
         explore a forest near your neighborhood.
@@ -21,28 +22,34 @@ export default function StartScreen() {
         What do you do?
       </Text>
 
-      <Link href="/ending1" style={styles.button}>
-      A: Hide inside a closet
-      </Link>
-      
-      <Link href="/part4" style={styles.button}>
-      B: Run out of the cabin
-      </Link>
+     <Link href="/part2" style={styles.button}>
+     A: Go to the old cabin
+     </Link>
+     
+     <Link href="/part3" style={styles.button}>
+     B: Follow the mysterious footprints
+     </Link>
+
+
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+    backgroundColor: "#8fac95",
     justifyContent: "center",
     padding: 20,
   },
   button: {
-    fontSize: 20,
+    fontSize: 18,
     textDecorationLine: "underline",
-    color: "#0000ff",
+    color: "#115b28",
+    fontWeight: "bold",
     margin: 20,
   },
+  story: {
+  fontSize: 23,
+},
 });
