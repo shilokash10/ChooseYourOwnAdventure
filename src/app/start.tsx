@@ -1,13 +1,17 @@
 
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
+
+const footprints = require("@/assets/images/footprints.jpeg");
 
 export default function StartScreen() {
   return (
     <View style={styles.container}>
+      
+      <Image source={footprints} style={styles.image} />
+
       <Text style={styles.story}>
-        The Forest That Never Ends
-        {"\n\n"}
         One afternoon, you and your best friend
         explore a forest near your neighborhood.
         Everyone says people have gone missing there.
@@ -38,18 +42,26 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#8fac95",
+    backgroundColor: "#4a7152",
     justifyContent: "center",
     padding: 20,
   },
   button: {
     fontSize: 18,
     textDecorationLine: "underline",
-    color: "#115b28",
+    fontFamily: "Times New Roman",
+    color: "#093c19",
     fontWeight: "bold",
     margin: 20,
   },
   story: {
-  fontSize: 23,
+  fontFamily: "Times New Roman",
+  fontSize: 20,
 },
+image: {
+    width: 320,
+    height: 340,
+    borderRadius: 4,
+    marginBottom: 20,
+  },
 });

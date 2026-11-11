@@ -5,12 +5,10 @@ import { StyleSheet, Text, View } from "react-native";
 
 const cabin = require("@/assets/images/cabin.jpeg");
 
-
-
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>🌲 The Forest That Never Ends 🌲</Text>
+      <Text style={styles.title}>The Forest That Never Ends</Text>
 
       <Image source={cabin} style={styles.image} />
 
@@ -26,23 +24,26 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#b9d598",
+    backgroundColor: "#151811",
   },
   button: {
     fontSize: 20,
     textDecorationLine: "underline",
-    color: "#115b28",
+    fontFamily: "Times New Roman",
+    color: "#093c19",
     fontWeight: "bold",
     margin: 20,
   },
   image: {
-    width: 320,
-    height: 400,
+    width: 330,
+    height: 410,
     borderRadius: 4,
   },
   title: {
   fontSize: 27,
+  fontFamily: "Times New Roman",
   fontWeight: "bold",
+  color: "#3f822a",
   textAlign: "center",
   marginBottom: 20,
 },

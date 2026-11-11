@@ -1,10 +1,15 @@
-
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
+
+const insideCabin = require("@/assets/images/insideCabin.jpeg");
 
 export default function Part2Screen() {
   return (
     <View style={styles.container}>
+      
+      <Image source={insideCabin} style={styles.image} />
+
       <Text style={styles.story}>
         You and your friend walk toward the cabin.
         The windows are broken, and the door
@@ -37,16 +42,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#8fac95",
+    backgroundColor: "#827966",
   },
   button: {
     fontSize: 18,
     textDecorationLine: "underline",
-    color: "#115b28",
+    color: "#093c19",
+    fontFamily: "Times New Roman",
     fontWeight: "bold",
     margin: 20,
   },
   story: {
-  fontSize: 23,
+  fontFamily: "Times New Roman",
+  fontSize: 20,
 },
+image: {
+    width: 320,
+    height: 360,
+    borderRadius: 4,
+    marginBottom: 20,
+  },
 });

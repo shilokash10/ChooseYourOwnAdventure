@@ -1,10 +1,16 @@
-
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
+
+const gate = require("@/assets/images/gate.jpeg");
 
 export default function Ending3Screen() {
   return (
     <View style={styles.container}>
+
+      <Image source={gate} style={styles.image} />
+
+
       <Text style={styles.story}>
         Ending 3: The Escape
         {"\n\n"}
@@ -37,16 +43,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#8fac95",
+    backgroundColor: "#599286",
   },
   button: {
     fontSize: 18,
     textDecorationLine: "underline",
-    color: "#115b28",
+    color: "#093c19",
+    fontFamily: "Times New Roman",
     fontWeight: "bold",
     margin: 20,
   },
   story: {
-  fontSize: 23,
+  fontSize: 20,
+  fontFamily: "Times New Roman",
 },
+image: {
+    width: 320,
+    height: 330,
+    borderRadius: 4,
+    marginBottom: 20,
+  },
+
 });

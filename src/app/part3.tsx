@@ -1,10 +1,14 @@
-
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
+const fog = require("@/assets/images/fog.jpeg");
 
 export default function Part3Screen() {
   return (
     <View style={styles.container}>
+      
+      <Image source={fog} style={styles.image} />
+      
       <Text style={styles.story}>
         You follow the footprints deeper
         into the forest.
@@ -35,18 +39,26 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#8fac95",
+    backgroundColor: "#7c877e",
     justifyContent: "center",
     padding: 20,
   },
   button: {
     fontSize: 18,
     textDecorationLine: "underline",
-    color: "#115b28",
+    color: "#093c19",
+    fontFamily: "Times New Roman",
     fontWeight: "bold",
     margin: 20,
   },
   story: {
-  fontSize: 23,
+  fontFamily: "Times New Roman",
+  fontSize: 20,
 },
+image: {
+    width: 330,
+    height: 400,
+    borderRadius: 4,
+    marginBottom: 20,
+  },
 });

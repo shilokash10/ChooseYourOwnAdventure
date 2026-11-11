@@ -1,10 +1,17 @@
 
+import { Image } from "expo-image";
 import { Link } from "expo-router";
+
 import { StyleSheet, Text, View } from "react-native";
+
+const forest = require("@/assets/images/forest.jpeg");
 
 export default function Ending2Screen() {
   return (
     <View style={styles.container}>
+      
+      <Image source={forest} style={styles.image} />
+
       <Text style={styles.story}>
         Ending 2: The Endless Forest
         {"\n\n"}
@@ -41,16 +48,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#8fac95",
+    backgroundColor: "#636664",
   },
   button: {
     fontSize: 18,
     textDecorationLine: "underline",
-    color: "#115b28",
+    color: "#093c19",
+    fontFamily: "Times New Roman",
     fontWeight: "bold",
     margin: 20,
-  },
-  story: {
-  fontSize: 23,
 },
+  story: {
+  fontFamily: "Times New Roman",
+  fontSize: 20,
+},
+image: {
+    width: 300,
+    height: 300,
+    borderRadius: 4,
+    marginBottom: 20,
+  },
 });

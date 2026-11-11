@@ -1,10 +1,18 @@
 
+import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
+const closet = require("@/assets/images/closet.jpeg");
+
 export default function Ending1Screen() {
+  
   return (
     <View style={styles.container}>
+
+      <Image source={closet} style={styles.image} />
+
+
       <Text style={styles.story}>
         Ending 1: The Missing People
         {"\n\n"}
@@ -36,16 +44,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#8fac95",
+    backgroundColor: "#151816",
   },
   button: {
     fontSize: 18,
     textDecorationLine: "underline",
-    color: "#115b28",
+    color: "#093c19",
+    fontFamily: "Times New Roman",
     fontWeight: "bold",
     margin: 20,
   },
   story: {
-  fontSize: 23,
+  fontSize: 20,
+  fontFamily: "Times New Roman",
+  color: "#f5f8f6",
 },
+image: {
+    width: 320,
+    height: 380,
+    borderRadius: 4,
+    marginBottom: 20,
+  },
 });
